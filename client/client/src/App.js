@@ -13,7 +13,6 @@ class App extends Component {
     return (
       <Router>
         <div className='App'>
-          /* Path for form to be send to webmaster */
           <Route exact path='/' component={FormPage} />
           {/* Path whenre webmaster can see all the messages he received */}
           <Route path='/admin' component={AdminPage} />
