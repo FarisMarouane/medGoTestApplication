@@ -39,6 +39,11 @@ module.exports.routes = {
   // it is matched against Sails route blueprints.  See `config/blueprints.js`
   // for configuration options and examples.
 
-  'POST /saveContactInfo':"ContactInfoController.save",
+  'POST /saveContactInfo': 'ContactInfoController.save',
+
+  // Routes when form to webmaster is submitted successfully or not
+  '/success': 'SuccessController.success',
+
+  'error': 'ErrorController.error',
 
 };

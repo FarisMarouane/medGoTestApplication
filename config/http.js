@@ -15,10 +15,12 @@ module.exports.http = {
 
     // The order in which middleware should be run for HTTP request.
     // (the Sails router is invoked by the "router" middleware below.)
+
     order: [
       'startRequestTimer',
       'cookieParser',
       'session',
+      'expressValidator',
       'bodyParser',
       'handleBodyParserError',
       'compress',
@@ -31,6 +33,8 @@ module.exports.http = {
       '404',
       '500'
     ],
+
+    expressValidator: require('express-validator')()
 
     // The body parser that will handle incoming multipart HTTP requests.
     // By default as of v0.10, Sails uses [skipper](http://github.com/balderdashy/skipper).
